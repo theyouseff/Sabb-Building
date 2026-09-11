@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased overflow-x-hidden;
+  }
+  ::selection {
+    @apply bg-accent text-cream;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[11px] md:text-xs uppercase tracking-widest2 font-medium;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply w-6 h-px bg-accent;
+  }
+
+  .btn-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-300 ease-out;
+  }
+  .btn-pill-light {
+    @apply btn-pill bg-cream text-ink hover:bg-accent hover:text-cream;
+  }
+  .btn-pill-dark {
+    @apply btn-pill bg-ink text-cream hover:bg-accent;
+  }
+  .btn-pill-outline {
+    @apply btn-pill border border-ink/20 text-ink hover:border-accent hover:text-accent;
+  }
+  .btn-pill-outline-light {
+    @apply btn-pill border border-cream/30 text-cream hover:border-accent hover:text-accent;
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium tracking-wide transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .section-label {
+    @apply eyebrow text-accent-dark;
+  }
+
+  .card-dark {
+    @apply bg-dark-2 border border-white/5 rounded-2xl;
+  }
+
+  /* Content is visible by default (progressive enhancement) and is only
+     hidden-then-revealed by GSAP once animations.js confirms the library
+     loaded — see the "gsap-ready" class toggle in js/animations.js. This
+     guarantees text never gets stuck invisible if the GSAP CDN fails. */
+  .reveal,
+  .reveal-stagger > *,
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .gsap-ready .reveal,
+  .gsap-ready .reveal-stagger > *,
+  .gsap-ready .hero-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  .lang-btn {
+    @apply text-xs font-semibold tracking-widest2 uppercase transition-colors duration-300;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+  }
+  .faq-item.open .faq-panel {
+    grid-template-rows: 1fr;
+  }
+  .faq-panel > div {
+    overflow: hidden;
+  }
+
+  /* Every partner logo is rendered as a flat, uniformly-colored silhouette
+     via CSS mask (instead of its native brand colors) so a gold mark, a
+     navy script, and a pure-black wordmark all read as one consistent
+     "trusted by" treatment. Each element sets its own --logo-src and
+     aspect-ratio inline; height comes from a utility class per logo,
+     hand-tuned so sparser icon+text lockups (Nestone, U Tower, Celebrity)
+     read at the same visual weight as dense wordmarks (Golden House,
+     Infinity, Radisson) despite very different internal padding. */
+  .logo-mark {
+    display: inline-block;
+    width: auto;
+    flex-shrink: 0;
+    -webkit-mask-image: var(--logo-src);
+    mask-image: var(--logo-src);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    @apply bg-white/75 transition-colors duration-300;
+  }
+  .logo-mark:hover {
+    @apply bg-white;
+  }
+
+  .quote-text::before {
+    content: "\201C";
+  }
+  .quote-text::after {
+    content: "\201D";
+  }
+
+  .logo-marquee-viewport {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: logo-marquee 32s linear infinite;
+  }
+  .logo-marquee-viewport:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes logo-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 2rem));
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
+}
