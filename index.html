@@ -481,69 +481,85 @@
     </div>
 
     <div class="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 items-start">
-      <div class="bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+      <div class="flex flex-col h-full bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="text-accent"><path d="M4 21h16M6 21V9M18 21V9M4 9h16M4 9l8-5.5L20 9"/><path d="M10 21v-5h4v5"/></svg>
+        </div>
         <h3 class="font-serif text-2xl mb-1" data-i18n="pricing.tier1_name">Neo Classic</h3>
         <p class="text-ink/50 text-sm mb-6" data-i18n="pricing.tier1_desc">Sifatli ta'mir, ishonchli materiallar</p>
-        <div class="mb-8">
+        <div class="mb-6">
           <span class="font-sans font-extrabold text-4xl" data-i18n="pricing.tier1_price">$300</span>
           <span class="text-ink/50 text-sm" data-i18n="pricing.tier1_suffix">/m² dan</span>
         </div>
-        <ul class="space-y-3 mb-10 text-sm">
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier1_f1">Dizayn-loyiha</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier1_f2">Elektr va santexnika ishlari</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier1_f3">Devor va shift ishlari</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier1_f4">12 oy kafolat</span></li>
+        <div class="border-t border-ink/10 mb-6"></div>
+        <ul class="space-y-3 mb-8 text-sm flex-1">
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier1_f1">Dizayn-loyiha</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier1_f2">Elektr va santexnika ishlari</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier1_f3">Devor va shift ishlari</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier1_f4">12 oy kafolat</span></li>
         </ul>
         <a href="#cta" class="btn-pill-outline w-full justify-center"><span data-i18n="pricing.cta">Smeta olish</span></a>
       </div>
 
-      <div class="relative bg-ink text-cream rounded-2xl p-8 md:p-10 shadow-2xl lg:-translate-y-4 border border-accent/40 transition-all duration-300 ease-out hover:-translate-y-2 lg:hover:-translate-y-6 hover:shadow-black/50">
+      <div class="relative flex flex-col h-full bg-ink text-cream rounded-2xl p-8 md:p-10 shadow-2xl lg:-translate-y-4 border border-accent/40 transition-all duration-300 ease-out hover:-translate-y-2 lg:hover:-translate-y-6 hover:shadow-black/50">
         <span class="absolute -top-3 left-8 bg-accent text-cream text-[11px] uppercase tracking-widest2 px-3 py-1 rounded-full" data-i18n="pricing.tier2_badge">Ommabop</span>
+        <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="text-accent"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l1.8 1.8M17.2 17.2L19 19M19 5l-1.8 1.8M6.8 17.2L5 19"/></svg>
+        </div>
         <h3 class="font-serif text-2xl mb-1" data-i18n="pricing.tier2_name">High Tech</h3>
         <p class="text-cream/50 text-sm mb-6" data-i18n="pricing.tier2_desc">Eng ko'p tanlanadigan tarif</p>
-        <div class="mb-8">
+        <div class="mb-6">
           <span class="font-sans font-extrabold text-4xl" data-i18n="pricing.tier2_price">$350</span>
           <span class="text-cream/50 text-sm" data-i18n="pricing.tier2_suffix">/m² dan</span>
         </div>
-        <ul class="space-y-3 mb-10 text-sm">
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier2_f1">Individual dizayn-loyiha</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier2_f2">Premium materiallar</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier2_f3">Mebel va yoritish loyihasi</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier2_f4">24 oy kafolat</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier2_f5">Shaxsiy loyiha menejeri</span></li>
+        <div class="border-t border-cream/15 mb-6"></div>
+        <ul class="space-y-3 mb-8 text-sm flex-1">
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier2_f1">Individual dizayn-loyiha</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier2_f2">Premium materiallar</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier2_f3">Mebel va yoritish loyihasi</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier2_f4">24 oy kafolat</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier2_f5">Shaxsiy loyiha menejeri</span></li>
         </ul>
         <a href="#cta" class="btn-pill-light w-full justify-center"><span data-i18n="pricing.cta">Smeta olish</span></a>
       </div>
 
-      <div class="bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+      <div class="flex flex-col h-full bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="text-accent"><rect x="3" y="3" width="18" height="18" rx="1"/><rect x="7.5" y="7.5" width="9" height="9" rx="0.5"/></svg>
+        </div>
         <h3 class="font-serif text-2xl mb-1" data-i18n="pricing.tier3_name">Classic</h3>
         <p class="text-ink/50 text-sm mb-6" data-i18n="pricing.tier3_desc">Klassik uslubdagi hashamatli ta'mir</p>
-        <div class="mb-8">
+        <div class="mb-6">
           <span class="font-sans font-extrabold text-4xl" data-i18n="pricing.tier3_price">$450</span>
           <span class="text-ink/50 text-sm" data-i18n="pricing.tier3_suffix">/m² dan</span>
         </div>
-        <ul class="space-y-3 mb-10 text-sm">
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier3_f1">Individual klassik dizayn-loyiha</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier3_f2">Bezakli gips va lepnina elementlari</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier3_f3">Yog'och panel va mebel loyihasi</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier3_f4">30 oy kafolat</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier3_f5">Shaxsiy loyiha menejeri</span></li>
+        <div class="border-t border-ink/10 mb-6"></div>
+        <ul class="space-y-3 mb-8 text-sm flex-1">
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier3_f1">Individual klassik dizayn-loyiha</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier3_f2">Bezakli gips va lepnina elementlari</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier3_f3">Yog'och panel va mebel loyihasi</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier3_f4">30 oy kafolat</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier3_f5">Shaxsiy loyiha menejeri</span></li>
         </ul>
         <a href="#cta" class="btn-pill-outline w-full justify-center"><span data-i18n="pricing.cta">Smeta olish</span></a>
       </div>
 
-      <div class="bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+      <div class="flex flex-col h-full bg-cream rounded-2xl p-8 md:p-10 border border-ink/10 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:border-ink/20 hover:shadow-xl">
+        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="text-accent"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6-3 12M15 3l-3 6 3 12"/></svg>
+        </div>
         <h3 class="font-serif text-2xl mb-1" data-i18n="pricing.tier4_name">Lux</h3>
         <p class="text-ink/50 text-sm mb-6" data-i18n="pricing.tier4_desc">To'liq maxfiy, yuqori toifadagi ob'ektlar uchun</p>
-        <div class="mb-8">
+        <div class="mb-6">
           <span class="font-sans font-extrabold text-4xl" data-i18n="pricing.tier4_price">Individual</span>
         </div>
-        <ul class="space-y-3 mb-10 text-sm">
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier4_f1">Ekskluziv dizayn va arxitektura</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier4_f2">Premium va import materiallar</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier4_f3">Aqlli uy tizimlari</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier4_f4">36 oy kafolat</span></li>
-          <li class="flex gap-3"><svg class="text-accent shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pricing.tier4_f5">To'liq loyiha boshqaruvi</span></li>
+        <div class="border-t border-ink/10 mb-6"></div>
+        <ul class="space-y-3 mb-8 text-sm flex-1">
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier4_f1">Ekskluziv dizayn va arxitektura</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier4_f2">Premium va import materiallar</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier4_f3">Aqlli uy tizimlari</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier4_f4">36 oy kafolat</span></li>
+          <li class="flex gap-3"><span class="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="pricing.tier4_f5">To'liq loyiha boshqaruvi</span></li>
         </ul>
         <a href="#cta" class="btn-pill-outline w-full justify-center"><span data-i18n="pricing.cta">Smeta olish</span></a>
       </div>
