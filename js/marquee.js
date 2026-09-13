@@ -10,7 +10,12 @@
     // show, no matter how wide the screen is.
     var guard = 0;
     while (track.scrollWidth < viewportWidth * 3 && guard < 20) {
-      track.appendChild(template.cloneNode(true));
+      var clone = template.cloneNode(true);
+      // The template carries role="img"/aria-label on each logo for
+      // screen readers; hide every cloned repeat from the a11y tree so
+      // the same logo list isn't announced N times.
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
       guard++;
     }
   }
