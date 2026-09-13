@@ -48,7 +48,10 @@
   }
 
   .card-dark {
-    @apply bg-dark-2 border border-white/5 rounded-2xl;
+    @apply bg-dark-2 border border-white/5 rounded-2xl transition-all duration-300 ease-out;
+  }
+  .card-dark:hover {
+    @apply border-white/10 -translate-y-1.5 shadow-2xl shadow-black/40;
   }
 
   /* Content is visible by default (progressive enhancement) and is only
