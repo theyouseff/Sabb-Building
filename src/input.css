@@ -135,17 +135,25 @@
     align-items: center;
     gap: 4rem;
     width: max-content;
-    animation: logo-marquee 32s linear infinite;
+    /* --marquee-distance is measured in JS (js/marquee.js) as the exact
+       pixel offset between two consecutive .logo-marquee-set copies, so
+       the loop point is always pixel-perfect regardless of viewport width
+       or how wide the logos render — no baked-in percentage math. The
+       50% fallback only covers the instant before JS runs. */
+    animation: logo-marquee 34s linear infinite;
   }
-  .logo-marquee-viewport:hover .logo-marquee-track {
-    animation-play-state: paused;
+  .logo-marquee-set {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-shrink: 0;
   }
   @keyframes logo-marquee {
     from {
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-50% - 2rem));
+      transform: translateX(calc(-1 * var(--marquee-distance, 50%)));
     }
   }
   @media (prefers-reduced-motion: reduce) {

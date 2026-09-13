@@ -12,6 +12,7 @@
     window.SABB_CAROUSELS.init();
     window.SABB_ANIM.init();
     window.SABB_FORM.init();
+    window.SABB_MARQUEE.init();
 
     document.getElementById("current-year").textContent = new Date().getFullYear();
   });
