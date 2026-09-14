@@ -201,6 +201,14 @@
         direct_label: "yoki to'g'ridan-to'g'ri bog'laning",
         phone_display: "+998 90 123 45 67",
         telegram_display: "@sabbbuilding",
+        teaser_label: "Bepul konsultatsiya",
+        teaser_heading: "Formani to'ldiring — 24 soat ichida bog'lanamiz",
+        benefit1: "Bepul smeta va konsultatsiya",
+        benefit2: "24 soat ichida javob beramiz",
+        benefit3: "Hech qanday majburiyat yo'q",
+        open_button: "Formani to'ldirish",
+        trust_text: "120+ mijoz bizga ishonch bildirdi",
+        modal_close: "Yopish",
       },
       footer: {
         tagline: "Premium ta'mir — kalitdan kalitgacha.",
@@ -406,6 +414,14 @@
         direct_label: "или свяжитесь напрямую",
         phone_display: "+998 90 123 45 67",
         telegram_display: "@sabbbuilding",
+        teaser_label: "Бесплатная консультация",
+        teaser_heading: "Заполните форму — свяжемся в течение 24 часов",
+        benefit1: "Бесплатная смета и консультация",
+        benefit2: "Отвечаем в течение 24 часов",
+        benefit3: "Никаких обязательств",
+        open_button: "Заполнить форму",
+        trust_text: "120+ клиентов нам доверились",
+        modal_close: "Закрыть",
       },
       footer: {
         tagline: "Премиум ремонт — под ключ.",
@@ -454,6 +470,11 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var value = resolve(el.getAttribute("data-i18n-placeholder"), lang);
       if (value != null) el.setAttribute("placeholder", value);
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(function (el) {
+      var value = resolve(el.getAttribute("data-i18n-aria-label"), lang);
+      if (value != null) el.setAttribute("aria-label", value);
     });
 
     document.documentElement.setAttribute("lang", lang);

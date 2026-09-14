@@ -719,39 +719,85 @@
       </div>
     </div>
 
-    <div class="reveal bg-cream text-ink rounded-2xl p-7 md:p-10 shadow-2xl">
-      <form id="lead-form" class="space-y-5" novalidate>
-        <div>
-          <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.name_label">Ismingiz</label>
-          <input type="text" name="name" autocomplete="name" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow" data-i18n-placeholder="cta.name_placeholder" placeholder="Ismingizni kiriting" />
+    <div class="reveal bg-cream text-ink rounded-2xl p-8 md:p-10 shadow-2xl">
+      <p class="section-label mb-4" data-i18n="cta.teaser_label">Bepul konsultatsiya</p>
+      <h3 class="font-serif text-2xl md:text-3xl leading-snug mb-6" data-i18n="cta.teaser_heading">Formani to'ldiring — 24 soat ichida bog'lanamiz</h3>
+
+      <ul class="space-y-3 mb-8 text-sm text-ink/70">
+        <li class="flex items-center gap-3">
+          <svg class="text-accent shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="cta.benefit1">Bepul smeta va konsultatsiya</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="text-accent shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="cta.benefit2">24 soat ichida javob beramiz</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="text-accent shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="cta.benefit3">Hech qanday majburiyat yo'q</span>
+        </li>
+      </ul>
+
+      <button id="open-lead-form" type="button" class="btn-pill-dark w-full justify-center">
+        <span data-i18n="cta.open_button">Formani to'ldirish</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </button>
+
+      <div class="mt-6 flex items-center gap-3">
+        <div class="flex -space-x-2">
+          <span class="w-8 h-8 rounded-full bg-accent/20 border-2 border-cream flex items-center justify-center text-[11px] font-semibold text-accent-dark">A</span>
+          <span class="w-8 h-8 rounded-full bg-accent/30 border-2 border-cream flex items-center justify-center text-[11px] font-semibold text-accent-dark">B</span>
+          <span class="w-8 h-8 rounded-full bg-accent/40 border-2 border-cream flex items-center justify-center text-[11px] font-semibold text-accent-dark">S</span>
         </div>
-        <div>
-          <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.phone_label">Telefon raqamingiz</label>
-          <input type="tel" name="phone" autocomplete="tel" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow" data-i18n-placeholder="cta.phone_placeholder" placeholder="+998 90 123 45 67" />
-        </div>
-        <div>
-          <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.service_label">Xizmat turi</label>
-          <select name="service" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow">
-            <option value="" data-i18n="cta.service_placeholder">Tanlang</option>
-            <option value="villa" data-i18n="cta.service_option1">Villa / hovli uyi ta'miri</option>
-            <option value="apartment" data-i18n="cta.service_option2">Kvartira ta'miri</option>
-            <option value="office" data-i18n="cta.service_option3">Ofis / tijorat maydoni</option>
-            <option value="other" data-i18n="cta.service_option4">Boshqa</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.message_label">Xabar (ixtiyoriy)</label>
-          <textarea name="message" rows="3" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow resize-none" data-i18n-placeholder="cta.message_placeholder" placeholder="Loyihangiz haqida qisqacha yozing"></textarea>
-        </div>
-        <button type="submit" class="btn-pill-dark w-full justify-center">
-          <span data-i18n="cta.submit">Yuborish</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </button>
-        <p id="lead-form-status" class="hidden text-sm text-center"></p>
-      </form>
+        <p class="text-xs text-ink/50" data-i18n="cta.trust_text">120+ mijoz bizga ishonch bildirdi</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ============ LEAD FORM MODAL ============ -->
+<div id="lead-modal" class="fixed inset-0 z-[80] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="lead-modal-heading">
+  <div id="lead-modal-backdrop" class="absolute inset-0 bg-ink/70 backdrop-blur-sm"></div>
+
+  <div id="lead-modal-panel" class="relative bg-cream text-ink rounded-2xl p-7 md:p-10 shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto scale-95 transition-transform duration-300">
+    <button id="lead-modal-close" type="button" data-i18n-aria-label="cta.modal_close" aria-label="Yopish" class="absolute top-5 right-5 p-2 text-ink/40 hover:text-ink transition-colors">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+
+    <p class="section-label mb-3" data-i18n="cta.label">Aloqa</p>
+    <h3 id="lead-modal-heading" class="font-serif text-2xl md:text-3xl leading-snug mb-6" data-i18n="cta.heading">Loyihangizni muhokama qilaylik</h3>
+
+    <form id="lead-form" class="space-y-5" novalidate>
+      <div>
+        <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.name_label">Ismingiz</label>
+        <input type="text" name="name" autocomplete="name" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow" data-i18n-placeholder="cta.name_placeholder" placeholder="Ismingizni kiriting" />
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.phone_label">Telefon raqamingiz</label>
+        <input type="tel" name="phone" autocomplete="tel" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow" data-i18n-placeholder="cta.phone_placeholder" placeholder="+998 90 123 45 67" />
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.service_label">Xizmat turi</label>
+        <select name="service" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow">
+          <option value="" data-i18n="cta.service_placeholder">Tanlang</option>
+          <option value="villa" data-i18n="cta.service_option1">Villa / hovli uyi ta'miri</option>
+          <option value="apartment" data-i18n="cta.service_option2">Kvartira ta'miri</option>
+          <option value="office" data-i18n="cta.service_option3">Ofis / tijorat maydoni</option>
+          <option value="other" data-i18n="cta.service_option4">Boshqa</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-widest2 text-ink/50 mb-2" data-i18n="cta.message_label">Xabar (ixtiyoriy)</label>
+        <textarea name="message" rows="3" class="w-full bg-cream-2 rounded-lg px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-accent transition-shadow resize-none" data-i18n-placeholder="cta.message_placeholder" placeholder="Loyihangiz haqida qisqacha yozing"></textarea>
+      </div>
+      <button type="submit" class="btn-pill-dark w-full justify-center">
+        <span data-i18n="cta.submit">Yuborish</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </button>
+      <p id="lead-form-status" class="hidden text-sm text-center"></p>
+    </form>
+  </div>
+</div>
 
 <footer class="bg-dark text-cream/60 border-t border-cream/10 py-12">
   <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -786,6 +832,7 @@
 <script src="js/carousels.js" defer></script>
 <script src="js/animations.js" defer></script>
 <script src="js/form.js" defer></script>
+<script src="js/lead-modal.js" defer></script>
 <script src="js/marquee.js" defer></script>
 <script src="js/main.js" defer></script>
 
