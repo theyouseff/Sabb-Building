@@ -12,6 +12,10 @@
         y: 0,
         duration: 0.9,
         ease: "power3.out",
+        clearProps: "transform",
+        onComplete: function () {
+          el.classList.add("is-revealed");
+        },
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
@@ -28,6 +32,12 @@
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.1,
+        clearProps: "transform",
+        onComplete: function () {
+          Array.prototype.forEach.call(items, function (item) {
+            item.classList.add("is-revealed");
+          });
+        },
         scrollTrigger: {
           trigger: group,
           start: "top 85%",

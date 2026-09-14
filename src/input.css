@@ -48,25 +48,30 @@
   }
 
   .card-dark {
-    @apply bg-dark-2 border border-white/5 rounded-2xl transition-all duration-300 ease-out;
+    @apply bg-dark-2 border border-white/5 rounded-2xl transition-all duration-300 ease-out cursor-default;
   }
   .card-dark:hover {
-    @apply border-white/10 -translate-y-1.5 shadow-2xl shadow-black/40;
+    @apply border-accent/40 bg-white/[0.03] -translate-y-2.5 shadow-2xl shadow-black/50;
   }
 
   /* Content is visible by default (progressive enhancement) and is only
      hidden-then-revealed by GSAP once animations.js confirms the library
      loaded — see the "gsap-ready" class toggle in js/animations.js. This
-     guarantees text never gets stuck invisible if the GSAP CDN fails. */
+     guarantees text never gets stuck invisible if the GSAP CDN fails.
+     :not(.is-revealed) lets each tween's onComplete permanently opt an
+     element out of this rule (see clearProps + classList.add in
+     animations.js) so a later CSS :hover transform (e.g. card-dark's
+     lift) isn't fought by this rule once GSAP's own inline transform
+     override is cleared. */
   .reveal,
   .reveal-stagger > *,
   .hero-reveal {
     opacity: 1;
     transform: none;
   }
-  .gsap-ready .reveal,
-  .gsap-ready .reveal-stagger > *,
-  .gsap-ready .hero-reveal {
+  .gsap-ready .reveal:not(.is-revealed),
+  .gsap-ready .reveal-stagger > *:not(.is-revealed),
+  .gsap-ready .hero-reveal:not(.is-revealed) {
     opacity: 0;
     transform: translateY(28px);
   }
